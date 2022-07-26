@@ -1,11 +1,12 @@
 import gym
 import numpy as np
+
 env = gym.make("Taxi-v3", new_step_api=True, render_mode='rgb_array')
 env.reset()
 print("Action Space {}".format(env.action_space))
 print("State Space {}".format(env.observation_space))
 
-state = env.encode(3, 1, 2, 0) # (taxi row, taxi column, passenger index, destination index)
+state = env.encode(3, 1, 2, 0)  # (taxi row, taxi column, passenger index, destination index)
 print("State:", state)
 
 env.s = state
@@ -14,6 +15,7 @@ import random
 from IPython.display import clear_output
 
 import numpy as np
+
 q_table = np.zeros([env.observation_space.n, env.action_space.n])
 
 # hyperparameter
