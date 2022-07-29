@@ -1,5 +1,4 @@
 import gym
-import numpy as np
 
 env = gym.make("Taxi-v3", new_step_api=True, render_mode='rgb_array')
 env.reset()
@@ -60,3 +59,29 @@ for i in range(1, 100):
             print(f"Episode: {i}")
 
 print("Training finished.\n")
+# load cifar10 data from
+import torchvision, torch
+import torchvision.transforms as transforms
+
+transform = transforms.Compose(
+    [transforms.ToTensor(), transforms.Normalize(0.5,0.5,0.5), (0.5,0.5,0.5)])
+trainset = torchvision.datasets.CIFAR10(root='./data', train=True,  # 查dataset和dataloader的作用
+                                       download=TRUE,transform=transform)
+trainloader = torch.utils.data.DataLoader(trainset, batchsize=4,
+                                         shuffle=TRUE, num_workers=2)
+
+testset = torchvision.datasets.CIFAR10(root='./data', train=False,
+                                       download=TRUE,transform=transform)
+
+def docstring_func_google_typ(parm_a, parm_b, param_c):
+    """
+
+    Args:
+        parm_a (int):
+        parm_b (nn.Module):
+        param_c (bool):
+
+    Returns:
+        int:
+    """
+
