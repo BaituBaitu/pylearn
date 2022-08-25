@@ -6,3 +6,6 @@ a repository to test learning python.Including:
 write this line to add a new branch
 
 use local interpreter `regular`
+
+
+install rllib in `regular`
