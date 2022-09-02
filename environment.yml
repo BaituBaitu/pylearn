@@ -1,0 +1,22 @@
+name: regular
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - scipy
+  - numpy
+  - pandas
+  - jupyterlab
+  - jupyter
+  - matplotlib
+  - ffmpeg
+  - pytorch
+  - torchaudio
+  - torchvision
+  - sphinx
+  - pytest
+  - tensorboard
+  - tqdm
+  - dill
+  - seaborn
+prefix: /Users/dengsiyuan/opt/anaconda3/envs/regular
